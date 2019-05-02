@@ -1,0 +1,19 @@
+include ./helpers/mixins
+
+block variables
+
+doctype html
+html
+    head
+        title
+            block page-title
+        link(rel="stylesheet" href='style/foundation.css')
+        link(rel="stylesheet" href='style/style.css')
+    body
+        //- +select('c-select', ['some1', 'some2', 'some3', 'some4'])
+        include ./components/header
+
+        block page
+
+        script(src='/js/foundation.js')
+        script(src='/js/main.js')

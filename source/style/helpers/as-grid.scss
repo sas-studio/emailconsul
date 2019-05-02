@@ -56,6 +56,46 @@ img {
 table {
     border-collapse: collapse;
 }
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+
 /*======================*/
 
 /*--------flex---------------*/

@@ -1,0 +1,26 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--top {
+        $col: white;
+
+        width: rem(420);
+        height: rem(70);
+        border: 3px solid $col;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+        border-radius: rem(20);
+
+        color: $col;
+        font-size: rem(40);
+        font-weight: 300;
+
+        transition: all .25s;
+
+        &:hover {
+            background-color: $col;
+            color: #00B1F5;
+        }
+    }
+}

@@ -1,15 +1,17 @@
-include ./helpers/mixins
+extends layout
 
-doctype html
-html
-    head
-        title PageTitle
-        link(rel="stylesheet" href='style/foundation.css')
-        link(rel="stylesheet" href='style/style.css')
-    body
-        +select('c-select', ['some1', 'some2', 'some3', 'some4'])
+block page-title
+    | Main
 
+block page
 
+    .index-top
+        .main
 
-        script(src='js/foundation.js')
-        script(src='js/main.js')
+            .index-top__content
+                h1.index-top__title Deliverability
+                .index-top__desc We're field experts in email and take deliverability seriously. Our technology is designed to help you achieve optimum inbox placement
+                button.btn.btn--top.index-top__btn Learn more
+
+                .index-top__img
+                    img(src="/images/index-top-all.png" alt="")
