@@ -1,14 +1,9 @@
 mixin nav(classes)
+    include variables
+
     nav(class=`nav ${classes}`)
         ul.nav__ul
-            -
-                var links = [
-                    {title: 'Home', href: '#'},
-                    {title: 'About', href: '#'},
-                    {title: 'Services', href: '#'},
-                    {title: 'Contact', href: '#'},
-                ]
-            each item in links
+            each item in navlinks
                 li.nav__li
                     a(href=`${item.href}`).nav__link
                         span= item.title

@@ -1,0 +1,24 @@
+.footer-nav {
+
+    &__ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__li {
+        margin-right: rem(35);
+    }
+
+    &__link {
+        color: $text-color;
+        text-decoration: none;
+        font-size: rem(24);
+        font-weight: 300;
+        line-height: rem(33);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

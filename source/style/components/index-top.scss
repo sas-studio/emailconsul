@@ -1,14 +1,15 @@
 .index-top {
     background:
         linear-gradient(19.39deg, #0079A7 7.34%, #0F7FAA 15.06%, #017CAB 33.36%, #068DC2 59.07%, #00B1F5 85.92%);
-    background-image: url('/images/top1.png');
-    background-position: right top;
+    background-image: url('/images/header-bottom.svg'), url('/images/top1.png');
+    background-position: center bottom, right top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain, cover;
 
     height: 100vh;
     min-height: rem(650);
     padding-top: rem(162);
+    padding-bottom: rem(160);
 
     color: white;
 

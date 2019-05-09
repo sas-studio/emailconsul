@@ -1,0 +1,26 @@
+.socials {
+    &__link {
+        text-decoration: none;
+        display: inline-block;
+        width: rem(50);
+        height: rem(50);
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &--fb {
+            background-image: url('/images/fb.svg');
+        }
+        &--tw {
+            background-image: url('/images/tw.svg');
+        }
+        &--lin {
+            background-image: url('/images/lin.svg');
+        }
+        &--skype {
+            background-image: url('/images/skype.svg');
+        }
+
+    }
+}

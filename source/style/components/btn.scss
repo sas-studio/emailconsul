@@ -7,7 +7,8 @@
         $col: white;
 
         width: rem(420);
-        height: rem(70);
+        height: rem(76);
+        max-height: rem(76);
         border: 3px solid $col;
         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
         border-radius: rem(20);
@@ -21,6 +22,48 @@
         &:hover {
             background-color: $col;
             color: #00B1F5;
+        }
+    }
+
+    &--content {
+        $col: #0177A4;
+
+        width: rem(330);
+        height: rem(79);
+        border: 2px solid $col;
+        box-shadow: 0px 0px 10px rgba(1, 119, 164, 0.3);
+        border-radius: rem(10);
+
+        color: $col;
+        font-size: rem(32);
+        font-weight: 300;
+
+        transition: all .25s;
+
+        &:hover {
+            background-color: $col;
+            color: white;
+        }
+    }
+
+    &--purple {
+        $col: #6E47C3;
+
+        width: rem(330);
+        height: rem(79);
+        background: $col;
+        box-shadow: 0px 0px 10px rgba(110, 71, 195, 0.4);
+        border-radius: rem(10);
+
+        color: white;
+        font-size: rem(32);
+        font-weight: 300;
+
+        transition: all .25s;
+
+        &:hover {
+            background-color: white;
+            color: $col;
         }
     }
 }

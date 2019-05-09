@@ -2,7 +2,7 @@
     DOC.addEventListener('DOMContentLoaded', () => {
         const header = DOC.querySelector('#header');
 
-        WIN.onscroll = (e) => {
+        function setHeaderStyle(e) {
             if (pageYOffset === 0) {
                 header.classList.contains('fix') && (header.classList.remove('fix'));
             }
@@ -10,5 +10,8 @@
                 !header.classList.contains('fix') && (header.classList.add('fix'));
             }
         }
+
+        WIN.onscroll = setHeaderStyle;
+        WIN.onload = setHeaderStyle;
     });
 })(document, window);

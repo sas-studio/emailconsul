@@ -1,0 +1,25 @@
+footer.footer
+    include variables
+    .footer__top
+        .main
+            .footer__top-content
+                nav.footer__nav.footer-nav
+                    ul.footer-nav__ul
+                        each item in navlinks
+                            li.footer-nav__li
+                                a(href=`${item.href}`).footer-nav__link
+                                    span= item.title
+                .footer__socials.socials
+                    a(href="#" title="facebook").socials__link.socials__link--fb
+                    a(href="#" title="twitter").socials__link.socials__link--tw
+                    a(href="#" title="linkedIn").socials__link.socials__link--lin
+                    a(href="#" title="skype").socials__link.socials__link--skype
+    .footer__bottom
+        .main
+            .footer__bottom-content
+                .footer__license
+                    | © 2019 Our company. All Rights Reserved.
+                a(href="tel:999999999" title="tel").footer__call-tel
+                    img(src="/images/phone-call.svg" alt="")
+                    span Call us today
+                    span + 38 (093) 43 76 654

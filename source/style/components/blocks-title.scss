@@ -1,0 +1,20 @@
+.blocks-title {
+    font-weight: normal;
+    font-size: rem(48);
+    line-height: rem(65);
+    color: $text-color;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(200);
+        height: 3px;
+        border-radius: 5px;
+        background-color: $text-color;
+    }
+}

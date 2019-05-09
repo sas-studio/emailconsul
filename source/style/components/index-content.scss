@@ -1,0 +1,34 @@
+.index-content {
+    position: relative;
+    padding-bottom: rem(94);
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     height: rem(368);
+    //     bottom: 100%;
+    //     left: 0;
+    //     right: 0;
+    //     background-image: url('/images/header-bottom.svg');
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     background-position: center bottom;
+    // }
+
+    &__block-title {
+        // margin-bottom: rem(96);
+    }
+
+    &__two-blocks {
+        &:first-child {
+            margin-top: rem(100);
+        }
+        &:not(:first-child) {
+            margin-top: rem(230);
+        }
+    }
+
+    &__footer {
+        margin-top: rem(150);
+    }
+}
