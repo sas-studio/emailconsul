@@ -1,0 +1,38 @@
+extends components/layout
+
+block page-title
+    | Contact
+
+block page
+
+    section.spage-top.spage-top--contact
+        .main
+
+            .spage-top__content
+                h1.spage-top__title Our contact
+
+                .spage-top__img.spage-top__img--contact
+                    img(src="/images/contact-head.png" alt="")
+
+    section.contact
+        .main
+
+            .contact__content
+                .contact__desc
+                    .contact__row
+                        h4.contact__subtitle Our office
+                        p.contact__text 471 McAuley Street Oakland, CA 94609
+
+                    .contact__row
+                        h4.contact__subtitle Our mail
+                        a(href="mailto:mediaeem@gmail.com" title="email").contact__email mediaeem@gmail.com
+
+                    .contact__row
+                        h4.contact__subtitle Our mail
+                        div
+                            a(href="tel:+999999999" title="tel").contact__tel + 38 (093) 45 76 320
+                        div
+                            a(href="tel:+999999999" title="tel").contact__tel + 38 (093) 45 76 320
+
+                .contact__map
+                    img(src="/images/mock-map.png" alt="map")

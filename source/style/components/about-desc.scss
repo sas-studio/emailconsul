@@ -1,0 +1,31 @@
+.about-desc {
+    display: flex;
+
+    &__img {
+        width: rem(550);
+        height: rem(385);
+        // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        overflow: hidden;
+
+        background-image: url('/images/team.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        margin-right: rem(90);
+    }
+
+    &__text {
+        flex: 1;
+
+        color: $text-color;
+        font-size: rem(20);
+        font-weight: 300;
+        line-height: rem(30);
+
+        p {
+            margin-bottom: rem(20);
+        }
+    }
+}

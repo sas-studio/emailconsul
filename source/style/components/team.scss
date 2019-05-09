@@ -1,0 +1,44 @@
+.team {
+
+    color: $text-color;
+
+    &__title {
+        margin-bottom: rem(54);
+    }
+
+    &__members {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__member {
+        margin: rem(10);
+
+        text-align: center;
+    }
+
+    &__photo {
+        width: rem(420);
+        height: rem(400);
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__fio {
+        font-size: rem(32);
+        line-height: rem(44);
+        font-weight: 300;
+
+        margin-top: rem(20);
+    }
+
+    &__position {
+        font-size: rem(20);
+        line-height: rem(27);
+        font-weight: 300;
+
+        margin-top: rem(8);
+    }
+}

@@ -1,4 +1,4 @@
-include ./helpers/mixins
+include ../helpers/mixins
 
 block variables
 
@@ -11,12 +11,12 @@ html
         link(rel="stylesheet" href='style/style.css')
     body
         //- +select('c-select', ['some1', 'some2', 'some3', 'some4'])
-        include ./components/header
+        include ../components/header
 
         main
             block page
 
-        include ./components/footer
+        include ../components/footer
 
         script(src='/js/foundation.js')
         script(src='/js/main.js')

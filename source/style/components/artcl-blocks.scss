@@ -1,0 +1,30 @@
+.artcl-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__block {
+        width: calc(33% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: rem(69);
+    }
+
+    &__img {
+        height: rem(220);
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    &__desc {
+        margin-top: rem(30);
+        font-size: rem(24);
+        font-weight: 300;
+        line-height: rem(33);
+    }
+}

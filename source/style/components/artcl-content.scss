@@ -1,0 +1,12 @@
+.artcl-content {
+    color: $text-color;
+    padding: rem(80) 0 rem(115);
+
+    &__desc {
+        font-size: rem(20);
+        line-height: rem(30);
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        margin-bottom: rem(20);
+    }
+}

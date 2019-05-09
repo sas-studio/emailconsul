@@ -1,0 +1,49 @@
+.contact {
+    padding: rem(100);
+
+    color: $text-color;
+
+    &__content {
+        display: flex;
+    }
+
+    &__desc {
+        flex: 1;
+        margin-right: rem(50);
+    }
+
+    &__row {
+        margin-bottom: rem(44);
+    }
+
+    &__subtitle {
+        font-size: rem(42);
+        line-height: rem(57);
+
+        margin-bottom: rem(16);
+    }
+
+    &__text {
+        font-size: rem(32);
+        line-height: rem(44);
+        font-weight: 300;
+    }
+
+    &__email,
+    &__tel {
+        color: $text-color;
+        font-size: rem(32);
+        font-weight: 300;
+        line-height: rem(44);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__map {
+        width: rem(844);
+        height: rem(540);
+    }
+}
