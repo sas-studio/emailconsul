@@ -1,7 +1,42 @@
 header.header#header
+    include variables
     .main
         .header__content
             .header__logo
 
-            include ./nav
-            +nav('header__nav')
+            nav(class="nav header__nav")
+                ul.nav__ul
+                    li.nav__li
+                        a(href="#").nav__link
+                            span Home
+
+                    li.nav__li
+                        a(href="#").nav__link
+                            span About
+
+                    li.nav__li
+                        a(href="#").nav__link.nav__link--subnav
+                            span Services
+
+                        .nav__subnav.subnav
+                            ul.subnav__ul
+                                li.subnav__li
+                                    .subnav__img
+                                        img(src="/images/Group.svg" alt="").subnav__icon
+                                    a(href="/#deliverability").subnav__link DELIVERABILITY
+                                li.subnav__li
+                                    .subnav__img
+                                        img(src="/images/key2.svg" alt="").subnav__icon
+                                    a(href="/#optimization").subnav__link OPTIMIZATION
+                                li.subnav__li
+                                    .subnav__img
+                                        img(src="/images/speech-bubble.svg" alt="").subnav__icon
+                                    a(href="/#client_services").subnav__link CLIENT SERVICES
+                                li.subnav__li
+                                    .subnav__img
+                                        img(src="/images/notification.svg" alt="").subnav__icon
+                                    a(href="/#optimization2").subnav__link OPTIMIZATION
+
+                    li.nav__li
+                        a(href="#").nav__link
+                            span Contact

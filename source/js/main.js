@@ -15,3 +15,27 @@
         WIN.onload = setHeaderStyle;
     });
 })(document, window);
+
+((DOC, WIN) => {
+    DOC.addEventListener('DOMContentLoaded', () => {
+        let activeSubnav = null;
+        const linksWithSubnav = document.querySelectorAll('.nav__link--subnav');
+        [...linksWithSubnav].forEach((el) => {
+            let subnav = el.parentNode.querySelector('.subnav');
+            el.onmouseover = () => {
+                subnav.classList.add('active');
+                if (activeSubnav && activeSubnav !== subnav) {
+                    activeSubnav.classList.remove('active');
+                }
+                activeSubnav = subnav;
+            }
+        });
+
+        DOC.onmousemove = (e) => {
+            if (activeSubnav && !e.target.closest('.header')) {
+                activeSubnav.classList.remove('active');
+                activeSubnav = null;
+            }
+        }
+    });
+})(document, window);

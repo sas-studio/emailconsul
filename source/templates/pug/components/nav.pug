@@ -1,9 +1,0 @@
-mixin nav(classes)
-    include variables
-
-    nav(class=`nav ${classes}`)
-        ul.nav__ul
-            each item in navlinks
-                li.nav__li
-                    a(href=`${item.href}`).nav__link
-                        span= item.title
