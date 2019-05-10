@@ -2,7 +2,7 @@
     background:
         linear-gradient(19.39deg, #0079A7 7.34%, #0F7FAA 15.06%, #017CAB 33.36%, #068DC2 59.07%, #00B1F5 85.92%);
     background-image: url('/images/header-bottom.svg'), url('/images/top1.png');
-    background-position: center calc(100% + 50px), right top;
+    background-position: center bottom, right top;
     background-repeat: no-repeat;
     background-size: contain, cover;
 
@@ -14,6 +14,10 @@
     color: white;
 
     overflow: hidden;
+
+    @include w-1200 {
+        height: auto;
+    }
 
     .main, &__content {
         height: 100%;
@@ -30,6 +34,17 @@
         position: absolute;
         top: rem(-50);
         right: rem(-150);
+
+        @include w-1200 {
+            right: rem(-200);
+        }
+
+        @include w-960 {
+            width: 30vw;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
     &__title {
@@ -48,5 +63,13 @@
 
         width: rem(755);
         margin-bottom: rem(40);
+
+        @include w-1290 {
+            width: 45%;
+        }
+
+        @include w-960 {
+            width: 60%;
+        }
     }
 }

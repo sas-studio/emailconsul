@@ -6,21 +6,53 @@
     &__img {
         position: absolute;
 
+        @include w-960 {
+            max-height: 100%;
+        }
+
         &--1 {
             bottom: rem(-16);
             right: rem(-67);
+
+            @include w-960 {
+                top: 50%;
+                transform: translateY(-50%);
+                right: auto;
+                left: rem(20);
+            }
         }
         &--2 {
             bottom: rem(-30);
             left: rem(0);
+
+            @include w-960 {
+                top: 50%;
+                transform: translateY(-50%);
+                left: auto;
+                right: rem(20);
+            }
         }
         &--3 {
             bottom: rem(-15);
             right: rem(-40);
+
+            @include w-960 {
+                top: 50%;
+                transform: translateY(-50%);
+                right: auto;
+                left: rem(20);
+            }
         }
         &--4 {
             bottom: rem(-56);
             left: rem(0);
+
+            @include w-960 {
+                top: 50%;
+                transform: translateY(-50%);
+                left: auto;
+                right: rem(20);
+            }
         }
     }
 }

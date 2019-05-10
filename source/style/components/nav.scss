@@ -1,9 +1,57 @@
 .nav {
     $col: #FFFDFD;
 
+    position: relative;
+
+    &__burger {
+        position: absolute;
+        top: 0;
+        right: rem(40);
+        width: rem(50);
+        height: rem(40);
+
+        background-image: url('/images/burger.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: all .5s;
+
+        @include w-767 {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
     &__ul {
         display: flex;
         list-style: none;
+
+        @include w-767 {
+            transition: all .5s;
+            opacity: 0;
+            pointer-events: none;
+
+            position: fixed;
+            top: rem(162);
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 0 0 rem(10) rem(10);
+            padding: rem(25);
+
+            flex-direction: column;
+
+            &.visible {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
 
     &__li {
@@ -32,6 +80,33 @@
                 opacity: 1;
             }
         }
+
+        @include w-960 {
+            &:not(:first-child) {
+                margin-left: rem(40);
+            }
+        }
+
+        @include w-767 {
+            margin-left: 0 !important;
+            text-align: center;
+
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+
+                &::after {
+                    background-color: #C4C4C4 !important;
+                    opacity: 1;
+                    bottom: rem(-10);
+                }
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
     }
 
     &__link {
@@ -40,5 +115,32 @@
         font-size: rem(24);
         font-weight: 300;
         line-height: rem(33);
+
+        @include w-767 {
+            color: $text-color;
+            font-size: rem(22);
+            line-height: rem(30);
+            text-transform: uppercase;
+            display: block;
+
+            &--subnav {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: calc(50% + 60px);
+                    transform: translateY(-50%);
+                    display: block;
+                    width: rem(12);
+                    height: rem(6);
+                    background-image: url('/images/arrow-down.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
     }
 }

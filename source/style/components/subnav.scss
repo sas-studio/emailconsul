@@ -28,11 +28,23 @@
         &:not(:last-child) {
             margin-bottom: rem(20);
         }
+
+        @include w-767 {
+            justify-content: center;
+
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
     }
 
     &__img {
         width: rem(35);
         margin-right: rem(16);
+
+        @include w-767 {
+            display: none;
+        }
     }
 
     &__link {
@@ -46,6 +58,29 @@
 
         &:hover {
             text-decoration: underline;
+        }
+
+        @include w-767 {
+            font-size: rem(14);
+            line-height: rem(19);
+        }
+    }
+
+    @include w-767 {
+        position: static;
+        height: 0;
+        padding: 0;
+
+        background: none;
+        box-shadow: none;
+        border-radius: 0 0 0 0;
+        border-top: 0px;
+        width: 100%;
+        transform: translateX(0);
+
+        &.active {
+            height: auto;
+            margin-top: rem(20);
         }
     }
 }

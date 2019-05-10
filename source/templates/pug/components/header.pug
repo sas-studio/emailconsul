@@ -4,8 +4,10 @@ header.header#header
         .header__content
             .header__logo
 
-            nav(class="nav header__nav")
-                ul.nav__ul
+            nav(class="nav header__nav")#nav
+                button(type="button").nav__burger.header__burger#burger
+
+                ul.nav__ul#navul
                     li.nav__li
                         a(href="#").nav__link
                             span Home

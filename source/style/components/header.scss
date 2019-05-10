@@ -21,7 +21,8 @@
         transition: all .5s;
     }
 
-    &.fix {
+    &.fix,
+    &.active {
         &::before {
             opacity: 1;
         }
@@ -41,6 +42,10 @@
                 }
             }
         }
+
+        .header__burger {
+            background-image: url('/images/burger2.svg');
+        }
     }
 
     &__content {
@@ -55,5 +60,7 @@
         background-size: contain;
         width: rem(242);
         height: rem(97);
+
+        margin-right: rem(40);
     }
 }

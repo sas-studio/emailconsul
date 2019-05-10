@@ -1,5 +1,10 @@
 .two-blocks {
     display: flex;
+    position: relative;
+
+    @include w-960 {
+        flex-direction: column;
+    }
 
     &__left,
     &__right {
@@ -8,6 +13,10 @@
 
         &-content {
             width: rem(645);
+
+            @include w-1290 {
+                width: 100%;
+            }
         }
     }
 
@@ -20,17 +29,33 @@
 
     &__img {
         height: rem(400);
+        min-height: rem(400);
+
+        @include w-960 {
+            height: rem(149);
+            min-height: rem(149);
+            margin-bottom: rem(32);
+        }
 
         &--left {
             background: linear-gradient(151.53deg, #0077A4 7.88%, #16B7D9 74.78%);
             box-shadow: 0px 10px 10px rgba(97, 97, 97, 0.25);
             border-radius: 0 rem(20) rem(20) 0;
+
+            @include w-960 {
+                border-radius: 0 0 0 0;
+            }
         }
 
         &--right {
             background: linear-gradient(123.74deg, #16B7D9 4.53%, #0078A5 86.26%);
             box-shadow: 0px 10px 10px rgba(97, 97, 97, 0.25);
             border-radius: rem(20) 0 0 rem(20);
+
+            @include w-960 {
+                border-radius: 0 0 0 0;
+                order: 1;
+            }
         }
     }
 
@@ -39,12 +64,44 @@
         &--right {
             .two-blocks__right-content {
                 padding-left: rem(117);
+
+                @include w-1290 {
+                    padding-right: rem(117);
+                }
+
+                @include w-1200 {
+                    padding-left: rem(60);
+                    padding-right: rem(30);
+                }
+
+                @include w-960 {
+                    padding-left: rem(20);
+                    padding-right: rem(20);
+                }
             }
         }
 
         &--left {
             .two-blocks__left-content {
                 padding-right: rem(117);
+
+                @include w-1290 {
+                    padding-left: rem(117);
+                }
+
+                @include w-1200 {
+                    padding-left: rem(30);
+                    padding-right: rem(60);
+                }
+
+                @include w-960 {
+                    padding-left: rem(20);
+                    padding-right: rem(20);
+                }
+            }
+
+            @include w-960 {
+                order: 2;
             }
         }
     }
@@ -56,6 +113,25 @@
         text-transform: uppercase;
 
         margin-bottom: rem(24);
+
+        @include w-960 {
+            position: absolute;
+            color: white;
+            top: rem(40);
+        }
+
+        &--1 {
+            right: rem(20);
+        }
+        &--2 {
+            left: rem(20);
+        }
+        &--3 {
+            right: rem(20);
+        }
+        &--4 {
+            left: rem(20);
+        }
     }
 
     &__p {
@@ -65,5 +141,11 @@
         color: $text-color;
 
         margin-bottom: rem(50);
+    }
+
+    &__btn {
+        @include w-960 {
+            margin: 0 auto;
+        }
     }
 }
