@@ -2,6 +2,10 @@
     color: $text-color;
     padding: rem(80) 0 rem(115);
 
+    @include w-960 {
+        padding: rem(30) 0 rem(60);
+    }
+
     &__desc {
         font-size: rem(20);
         line-height: rem(30);
