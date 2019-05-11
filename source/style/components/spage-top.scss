@@ -46,6 +46,14 @@
 
         &--contact {
             bottom: rem(-200);
+
+            @include w-960 {
+                bottom: rem(-130);
+            }
+
+            @include w-640 {
+                bottom: rem(-70);
+            }
         }
     }
 }

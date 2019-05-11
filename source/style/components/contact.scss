@@ -1,19 +1,36 @@
 .contact {
-    padding: rem(100);
+    padding: rem(100) 0;
 
     color: $text-color;
 
+    @include w-640 {
+        padding: rem(50) 0;
+    }
+
     &__content {
         display: flex;
+
+        @include w-960 {
+            flex-direction: column;
+        }
     }
 
     &__desc {
         flex: 1;
         margin-right: rem(50);
+
+        @include w-960 {
+            margin-right: 0;
+        }
     }
 
     &__row {
         margin-bottom: rem(44);
+
+        @include w-640 {
+            text-align: center;
+            margin-bottom: rem(32);
+        }
     }
 
     &__subtitle {
@@ -21,12 +38,22 @@
         line-height: rem(57);
 
         margin-bottom: rem(16);
+
+        @include w-640 {
+            font-size: rem(22);
+            line-height: rem(30);
+        }
     }
 
     &__text {
         font-size: rem(32);
         line-height: rem(44);
         font-weight: 300;
+
+        @include w-640 {
+            font-size: rem(20);
+            line-height: rem(27);
+        }
     }
 
     &__email,
@@ -40,10 +67,19 @@
         &:hover {
             text-decoration: underline;
         }
+
+        @include w-640 {
+            font-size: rem(20);
+            line-height: rem(27);
+        }
     }
 
     &__map {
         width: rem(844);
-        height: rem(540);
+        // height: rem(540);
+
+        @include w-960 {
+            width: 100%;
+        }
     }
 }
