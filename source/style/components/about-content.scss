@@ -1,7 +1,15 @@
 .about-content {
     padding: rem(107) 0;
 
+    @include w-480 {
+        padding: rem(50) 0 ;
+    }
+
     &__team {
         margin-top: rem(100);
+
+        @include w-480 {
+            margin-top: rem(50);
+        }
     }
 }

@@ -1,5 +1,6 @@
 .spage-top {
     background: linear-gradient(95.05deg, #0178A5 1.24%, #00B2F5 99.81%);
+    overflow: hidden;
 
     &__content {
         display: flex;
@@ -10,11 +11,19 @@
         height: rem(553);
 
         color: white;
+
+        @include w-960 {
+            height: 80vw;
+        }
     }
 
     &__title {
         font-size: rem(55);
         line-height: rem(75);
+
+        @include w-640 {
+            font-size: 8vw;
+        }
     }
 
      &__img {
@@ -25,6 +34,14 @@
 
         &--about {
             bottom: rem(-160);
+
+            @include w-960 {
+                bottom: rem(-100);
+            }
+
+            @include w-640 {
+                bottom: rem(-50);
+            }
         }
 
         &--contact {
