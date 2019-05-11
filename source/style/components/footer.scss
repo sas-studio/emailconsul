@@ -8,6 +8,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include w-767 {
+            flex-direction: column;
+        }
+    }
+
+    &__nav {
+        @include w-767 {
+            margin-bottom: rem(30);
+        }
     }
 
     &__socials {
@@ -15,6 +25,10 @@
 
         & > a:not(:first-child) {
             margin-left: rem(25);
+
+            @include w-410 {
+                margin-left: rem(15);
+            }
         }
     }
 
@@ -31,6 +45,20 @@
         color: $bottom-text-col;
         font-size: rem(18);
         font-weight: 300;
+
+        @include w-767 {
+            height: auto;
+            flex-direction: column;
+            padding: rem(20) 0;
+        }
+    }
+
+    &__license {
+        @include w-767 {
+            order: 2;
+            text-align: center;
+            font-size: rem(12);
+        }
     }
 
     &__call-tel {
@@ -52,6 +80,11 @@
             span:last-of-type {
                 text-decoration: underline;
             }
+        }
+
+        @include w-767 {
+            order: 1;
+            margin-bottom: rem(20);
         }
     }
 }

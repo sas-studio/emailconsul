@@ -132,6 +132,16 @@
         &--4 {
             left: rem(20);
         }
+
+        @include w-640 {
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        @include w-410 {
+            font-size: rem(35);
+        }
     }
 
     &__p {

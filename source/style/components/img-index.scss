@@ -55,4 +55,8 @@
             }
         }
     }
+
+    @include w-640 {
+        display: none;
+    }
 }

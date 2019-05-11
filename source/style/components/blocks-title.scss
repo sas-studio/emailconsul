@@ -17,4 +17,8 @@
         border-radius: 5px;
         background-color: $text-color;
     }
+
+    @include w-410 {
+        font-size: rem(30);
+    }
 }

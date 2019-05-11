@@ -5,6 +5,9 @@ block variables
 doctype html
 html
     head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+
         title
             block page-title
         link(rel="stylesheet" href='style/foundation.css')
@@ -19,4 +22,4 @@ html
         include ../components/footer
 
         script(src='/js/foundation.js')
-        script(src='/js/main.js')
+        script(src='/js/main.js?2')

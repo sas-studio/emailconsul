@@ -36,7 +36,7 @@
                 }
             }
             else {
-                el.onclick = (e) => {
+                el.onclick = () => {
                     if (activeSubnav) {
                         activeSubnav.classList.remove('active');
                         activeSubnav = null;
@@ -45,6 +45,8 @@
                         subnav.classList.add('active');
                         activeSubnav = subnav;
                     }
+
+                    return false;
                 }
             }
 
@@ -72,7 +74,7 @@
 
         const init = () => {
             if (WIN.screen.width < 768) {
-                DOC.onclick = (e) => {
+                DOC.onclick = DOC.ontouch = (e) => {
                     if (e.target.id === 'burger') {
                         if (!navUlIsActive) {
                             navUl.classList.add('visible');
@@ -101,3 +103,29 @@
         WIN.onresize = init;
     });
 })(document, window);
+
+// learn more main - not supported in Safari
+// ((DOC, WIN) => {
+//     DOC.addEventListener('DOMContentLoaded', () => {
+//         const btn = DOC.querySelector('#indexlearnmore');
+//         const content = DOC.querySelector('#indexcontent');
+
+//         btn.onclick = () => {
+//             content.scrollIntoView({block: "start", behavior: "smooth"});
+//         }
+
+//     });
+// })(document, window);
+
+// learn more main
+$(function() {
+    const $indexlearnmore = $("#indexlearnmore");
+    const $indexcontent = $("#indexcontent");
+    const indexcontentTopValue = $indexcontent.offset().top;
+
+    $indexlearnmore.click(function() {
+        $('html, body').animate({
+            scrollTop: indexcontentTopValue
+        }, 1500);
+    });
+});

@@ -21,6 +21,34 @@
         transition: all .5s;
     }
 
+    &__content {
+        height: rem(162);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include w-640 {
+            height: rem(100);
+        }
+    }
+
+    &__logo {
+        display: block;
+        background: url('/images/logo.svg') center no-repeat;
+        background-size: contain;
+        width: rem(242);
+        height: rem(97);
+
+        margin-right: rem(40);
+        text-decoration: none;
+        cursor: pointer;
+
+        @include w-640 {
+            width: rem(150);
+            height: rem(50);
+        }
+    }
+
     &.fix,
     &.active {
         &::before {
@@ -46,21 +74,5 @@
         .header__burger {
             background-image: url('/images/burger2.svg');
         }
-    }
-
-    &__content {
-        height: rem(162);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__logo {
-        background: url('/images/logo.svg') center no-repeat;
-        background-size: contain;
-        width: rem(242);
-        height: rem(97);
-
-        margin-right: rem(40);
     }
 }

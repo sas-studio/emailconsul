@@ -28,8 +28,20 @@
     }
 }
 
+@mixin w-640() {
+    @media screen and (max-width: $w-640) {
+        @content;
+    }
+}
+
 @mixin w-480() {
     @media screen and (max-width: $w-480) {
+        @content;
+    }
+}
+
+@mixin w-410() {
+    @media screen and (max-width: $w-410) {
         @content;
     }
 }

@@ -7,7 +7,13 @@
     }
 
     &__li {
-        margin-right: rem(35);
+        &:not(:last-child) {
+            margin-right: rem(35);
+
+            @include w-410 {
+                margin-right: rem(20);
+            }
+        }
     }
 
     &__link {

@@ -1,4 +1,8 @@
 .anchor {
     transform: translateY(rem(-200));
     display: block;
+
+    @include w-640 {
+        transform: translateY(rem(-100));
+    }
 }

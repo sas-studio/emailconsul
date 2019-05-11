@@ -9,6 +9,7 @@
         right: rem(40);
         width: rem(50);
         height: rem(40);
+        transform: translateY(-50%);
 
         background-image: url('/images/burger.svg');
         background-size: contain;
@@ -24,6 +25,10 @@
         @include w-767 {
             opacity: 1;
             pointer-events: auto;
+        }
+
+        @include w-640 {
+            right: rem(20);
         }
     }
 
@@ -51,6 +56,10 @@
                 opacity: 1;
                 pointer-events: auto;
             }
+        }
+
+        @include w-640 {
+            top: rem(100);
         }
     }
 
@@ -101,11 +110,11 @@
                 }
             }
 
-            &:hover {
-                &::after {
-                    opacity: 0;
-                }
-            }
+            // &:hover {
+            //     &::after {
+            //         opacity: 0;
+            //     }
+            // }
         }
     }
 

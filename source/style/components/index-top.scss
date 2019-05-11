@@ -19,6 +19,11 @@
         height: auto;
     }
 
+    @include w-640 {
+        padding-top: rem(120);
+        padding-bottom: rem(50);
+    }
+
     .main, &__content {
         height: 100%;
     }
@@ -45,6 +50,10 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
+        @include w-640 {
+            display: none;
+        }
     }
 
     &__title {
@@ -54,6 +63,11 @@
         line-height: rem(75);
 
         margin-bottom: rem(26);
+
+        @include w-410 {
+            font-size: rem(45);
+            margin-bottom: rem(15);
+        }
     }
 
     &__desc {
@@ -70,6 +84,15 @@
 
         @include w-960 {
             width: 60%;
+        }
+
+        @include w-640 {
+            width: 100%;
+            font-size: rem(25);
+        }
+
+        @include w-410 {
+            font-size: rem(20);
         }
     }
 }
